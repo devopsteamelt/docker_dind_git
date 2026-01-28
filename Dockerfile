@@ -1,7 +1,9 @@
 FROM docker:24.0.7-dind
 
 # Install dependencies
-RUN apk add --no-cache \
+RUN apk update && \
+    apk upgrade --no-cache && \
+    apk add --no-cache \
     git \
     docker-compose \
     bash \
@@ -17,7 +19,8 @@ RUN apk add --no-cache \
     py3-numpy \
     cmake \
     cython \
-    yaml-dev
+    yaml-dev \
+    openssh-server
 
 # Upgrade pip and create a virtual environment
 RUN python3 -m venv /workspace/venv && \
