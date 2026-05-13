@@ -5,6 +5,7 @@ RUN apk update && \
     apk upgrade --no-cache && \
     apk add --no-cache \
     git \
+    git-lfs \
     docker-compose \
     bash \
     openjdk8 \
