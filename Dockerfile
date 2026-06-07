@@ -20,6 +20,7 @@ RUN apk update && \
     py3-numpy \
     cmake \
     cython \
+    shadow \
     yaml-dev \
     openssh-server
 
